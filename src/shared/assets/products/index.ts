@@ -1,0 +1,1 @@
+export { ProductPixelArt } from './ProductPixelArt'

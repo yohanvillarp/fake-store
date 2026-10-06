@@ -1,0 +1,165 @@
+@import "tailwindcss";
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  :root {
+    --pixel-border: #18181b;
+    --pixel-bg: #f8fafc;
+    --pixel-card: #ffffff;
+    --pixel-primary: #2563eb;
+    --pixel-primary-hover: #1d4ed8;
+    --pixel-accent: #f59e0b;
+    --pixel-success: #10b981;
+    --pixel-muted: #64748b;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: var(--pixel-bg);
+    color: var(--pixel-border);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+      Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+@layer components {
+  /* Pixel Art Tactile UI Components */
+  .pixel-box {
+    border: 2px solid var(--pixel-border);
+    border-bottom-width: 4px;
+    border-right-width: 4px;
+    box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.08);
+  }
+
+  .pixel-box-lg {
+    border: 3px solid var(--pixel-border);
+    border-bottom-width: 6px;
+    border-right-width: 6px;
+    box-shadow: 3px 3px 0px 0px rgba(0, 0, 0, 0.12);
+  }
+
+  .pixel-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.375rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    font-size: 0.8125rem;
+    padding: 0.45rem 0.75rem;
+    border: 2px solid var(--pixel-border);
+    border-bottom-width: 3.5px;
+    border-right-width: 3.5px;
+    box-sizing: border-box;
+    transition: transform 0.08s ease, border-width 0.08s ease;
+    user-select: none;
+    cursor: pointer;
+  }
+
+  .pixel-button:hover:not(:disabled) {
+    transform: translate(-1px, -1px);
+    border-bottom-width: 4.5px;
+    border-right-width: 4.5px;
+  }
+
+  .pixel-button:active:not(:disabled) {
+    transform: translate(1.5px, 1.5px);
+    border-bottom-width: 2px;
+    border-right-width: 2px;
+  }
+
+  .pixel-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  .pixel-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    padding: 0.2rem 0.5rem;
+    border: 1.5px solid var(--pixel-border);
+    border-bottom-width: 2.5px;
+    border-right-width: 2.5px;
+    text-transform: uppercase;
+  }
+
+  .pixel-input {
+    width: 100%;
+    border: 2px solid var(--pixel-border);
+    border-bottom-width: 3px;
+    border-right-width: 3px;
+    padding: 0.625rem 0.875rem;
+    font-size: 0.875rem;
+    background-color: #ffffff;
+    outline: none;
+    transition: border-color 0.1s ease;
+  }
+
+  .pixel-input:focus {
+    border-color: var(--pixel-primary);
+  }
+}
+
+
+/* Subtle retro pixel grid background */
+.pixel-grid-pattern {
+  background-image: radial-gradient(var(--pixel-border) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Micro-interactions & animations */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes cartBadgeBounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-slideIn {
+  animation: slideIn 0.22s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-cart-badge {
+  animation: cartBadgeBounce 0.28s ease-in-out;
+}
+
+/* Respect user's reduced motion settings */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
