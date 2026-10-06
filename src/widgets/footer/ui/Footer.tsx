@@ -1,7 +1,7 @@
+import { ResetDemoModal } from '@/features/reset-demo'
+import { RotateCcw, Store } from 'lucide-react'
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Store, RotateCcw } from 'lucide-react'
-import { ResetDemoModal } from '@/features/reset-demo'
 
 export const Footer: React.FC = () => {
   const [resetModalOpen, setResetModalOpen] = useState(false)
@@ -97,7 +97,7 @@ export const Footer: React.FC = () => {
                 rel="noopener noreferrer"
                 className="text-zinc-300 hover:text-white underline font-medium transition-colors"
               >
-                Yohan Villar
+                nikelyh
               </a>
             </div>
             <p className="text-[11px] text-zinc-500 text-center sm:text-right">
