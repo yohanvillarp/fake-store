@@ -101,7 +101,7 @@ export const Footer: React.FC = () => {
               </a>
             </div>
             <p className="text-[11px] text-zinc-500 text-center sm:text-right">
-              Proyecto demostrativo open-source basado en el Brazilian E-Commerce Public Dataset by Olist.
+              Proyecto demostrativo y educativo basado en el Brazilian E-Commerce Public Dataset by Olist.
             </p>
           </div>
         </div>

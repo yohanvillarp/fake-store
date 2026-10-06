@@ -1,11 +1,11 @@
-# 🛍️ Fake Store (OLTP E-Commerce & Open-Source Benchmark)
+# 🛍️ Fake Store
 
 <p align="center">
   <img src="/public/favicon.svg" alt="Fake Store Logo" width="64" height="64" />
 </p>
 
 <p align="center">
-  <strong>Una tienda online simulada moderna, reactiva y transaccional diseñada para múltiples propósitos de desarrollo, analítica y pruebas.</strong>
+  <strong>Una tienda online simulada desarrollada para diversos usos y proyectos técnicos.</strong>
 </p>
 
 <p align="center">
@@ -21,19 +21,7 @@
 
 ## 🎯 ¿Para qué puedes usar este proyecto?
 
-**Fake Store** fue concebido no solo como una tienda visual, sino como una **plataforma versátil de código abierto** lista para utilizarse en una amplia variedad de escenarios técnicos:
-
-1. **📊 Demostración de Business Intelligence & Analítica (OLTP vs OLAP):**
-   - Registra transacciones en vivo en **PostgreSQL** y combínalas mediante refrescos automáticos en **Power BI** con datasets analíticos históricos (como el conocido *Brazilian E-Commerce Public Dataset by Olist*).
-2. **💳 Laboratorio de Pruebas de Transacciones ACID & Pasarelas:**
-   - Cuenta con un backend serverless que ejecuta bloqueos de stock concurrentes (`SELECT ... FOR UPDATE`), recálculo seguro de totales en servidor y transacciones atómicas completas (`BEGIN ... COMMIT / ROLLBACK`). Ideal para conectar pasarelas de pago reales o simuladas (Mercado Pago, Stripe, etc.).
-3. **⚡ Plantilla & Boilerplate Frontend de Alto Rendimiento:**
-   - Diseñado siguiendo estrictamente **Feature-Sliced Design (FSD 2.1)** con **React 19**, **Vite 8**, **Tailwind CSS v4**, soporte de React Compiler y tipado estricto con TypeScript.
-4. **🧪 Mock Store para Benchmarking, Testing E2E y QA:**
-   - Permite simular flujos de usuario completos: catálogo, búsqueda, filtrado, carrito reactivo, checkout multicuota y visor interactivo del registro crudo de base de datos (`[VIEW DATA RECORD]`).
-5. **☁️ Banco de Pruebas Serverless en la Nube:**
-   - Despliegue en 1 clic en **Vercel** conectado a bases de datos PostgreSQL serverless como **Neon** o **Supabase**. Si no configuras base de datos, ¡incluye un fallback automático en memoria para pruebas instantáneas!
-
+**Fake Store** es una tienda online simulada que puede utilizarse para diferentes usos.
 ---
 
 ## 🏛️ Arquitectura del Sistema
@@ -138,5 +126,5 @@ Este proyecto está bajo la Licencia **MIT**. Consulta el archivo [LICENSE](LICE
 ---
 
 <p align="center">
-  Creado con ❤️ por <a href="https://github.com/yohanvillarp"><strong>Yohan Villar</strong></a>
+  Creado con ❤️ por <a href="https://github.com/yohanvillarp"><strong>yohanvillarp</strong></a>
 </p>
