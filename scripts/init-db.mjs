@@ -4,6 +4,16 @@ import pg from 'pg'
 
 const { Client } = pg
 
+// Automatically load .env.local or .env if DATABASE_URL is not set in environment
+if (!process.env.DATABASE_URL && !process.env.PGHOST) {
+  const envLocalPath = path.resolve(import.meta.dirname, '../.env.local')
+  const envPath = path.resolve(import.meta.dirname, '../.env')
+  const targetPath = fs.existsSync(envLocalPath) ? envLocalPath : fs.existsSync(envPath) ? envPath : null
+  if (targetPath && typeof process.loadEnvFile === 'function') {
+    process.loadEnvFile(targetPath)
+  }
+}
+
 async function initDb() {
   const connectionString = process.env.DATABASE_URL
 
