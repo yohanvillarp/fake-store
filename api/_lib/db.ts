@@ -1,5 +1,5 @@
 import pg from 'pg'
-import type { ProductRecord } from './types'
+import type { ProductRecord } from './types.js'
 
 const { Pool } = pg
 

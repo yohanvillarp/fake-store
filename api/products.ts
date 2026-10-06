@@ -1,5 +1,5 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node'
-import { ensureDbBootstrapped, getDbPool, getMockDb } from './_lib/db'
+import { ensureDbBootstrapped, getDbPool, getMockDb } from './_lib/db.js'
 
 function setCorsHeaders(res: VercelResponse) {
   res.setHeader('Access-Control-Allow-Credentials', 'true')

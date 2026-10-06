@@ -1,13 +1,13 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node'
 import crypto from 'node:crypto'
-import { ensureDbBootstrapped, getDbPool, getMockDb } from './_lib/db'
+import { ensureDbBootstrapped, getDbPool, getMockDb } from './_lib/db.js'
 import type {
   CreateOrderPayload,
   CustomerRecord,
   OrderItemRecord,
   OrderRecord,
   PaymentRecord,
-} from './_lib/types'
+} from './_lib/types.js'
 
 function setCorsHeaders(res: VercelResponse) {
   res.setHeader('Access-Control-Allow-Credentials', 'true')
